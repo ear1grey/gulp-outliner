@@ -1,18 +1,18 @@
-# gulp-toc
+# gulp-outliner
 
-A [Gulp](http://gulpjs.com/) plugin for creating a table of contents (TOC) based on a structured HTML document arriving as a stream, it injects the TOC into the stream (at a predetermined point), and passes the stream on for the next plugin to work on.
+A [Gulp](http://gulpjs.com/) plugin for creating a document outline (table of contents) based on a structured HTML document arriving as a stream, it injects the outline into the stream (at a predetermined point), and passes the stream on for the next plugin to work on.
 
 ## Install
 
 ```
-npm install gulp-toc --save-dev
+npm install gulp-outliner --save-dev
 ```
 
 ## Example
 
-### Using `toc`
+### Using `gulp-outliner`
 
-In your HTML create a placeholder for the TOC.  The toc is appended to the content of an element whose `id` is `contents`. For example: 
+In your HTML create a placeholder for the outline.  The outline is appended to the content of an element whose `id` is `contents`. For example: 
 
 ```html
 <div id="contents">
@@ -25,15 +25,15 @@ In your gulp file add
 var gulp = require('gulp');
 
 // example task
-gulp.task('toc',
+gulp.task('outline',
     function () {
         return gulp.src("**.*.html")
-        .pipe(toc()) // add toc and crumbs
+        .pipe(outline()) // add toc
         .pipe(gulp.dest('./dest/'));
     }
 );
 ```
-Then run `gulp toc` from the command line.
+Then run `gulp outline` from the command line.
 
 ##TODO##
 See the [issues](https://github.com/ear1grey/gulp-outliner/issues) page.
