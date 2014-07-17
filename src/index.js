@@ -1,4 +1,4 @@
-const PLUGIN_NAME = 'gulp-toc';
+const PLUGIN_NAME = 'gulp-outliner';
 var through = require('through2');
 var jsdom = require("jsdom").jsdom;
 var outliner=require("outliner");
