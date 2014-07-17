@@ -1,0 +1,45 @@
+{
+  "name": "gulp-outliner",
+  "version": "0.0.1",
+  "description": "HTML Outliner for Gulp - generates a Table of Contents",
+  "homepage": "https://github.com/ear1grey/gulp-outliner",
+  "author": {
+    "name": "Rich Boakes",
+    "url": "http://boakes.org/"
+  },
+  "keywords": [
+    "gulp",
+    "gulpplugin",
+    "toc",
+    "contents",
+    "table of contents",
+    "section",
+    "article"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ear1grey/gulp-outliner.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ear1grey/gulp-outliner/issues"
+  },
+  "licenses": [
+    {
+      "type": "Creative Commons Attribution-ShareAlike 4.0 International License",
+      "url": "http://creativecommons.org/licenses/by-sa/4.0/"
+    }
+  ],
+  "main": "build/index.js",
+  "devDependencies": {
+    "gulp": "^3.8.6",
+    "gulp-uglify": "^0.3.1",
+    "jsdom": "^0.11.1",
+    "outliner": "^0.1.0",
+    "through2": "^0.5.1"
+  },
+  "dependencies": {
+    "jsdom": "^0.11.1",
+    "outliner": "^0.1.0",
+    "through2": "^0.5.1"    
+  }
+}
