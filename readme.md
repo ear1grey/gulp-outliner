@@ -33,7 +33,7 @@ gulp.task('toc',
     }
 );
 ```
-Then run `gulp toc' from the command line.
+Then run `gulp toc` from the command line.
 
 ##TODO##
 See the [issues](https://github.com/ear1grey/gulp-outliner/issues) page.
