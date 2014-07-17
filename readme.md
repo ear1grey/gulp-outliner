@@ -15,9 +15,9 @@ npm install gulp-toc --save-dev
 In your HTML create a placeholder for the TOC.  The toc is appended to the content of an element whose `id` is `contents`. For example: 
 
 ```html
-&lt;div id="contents"&gt;
-    &lt;h1&gt;Contents&lt;/h1&gt;
-&lt;/div&gt;
+<div id="contents">
+    <h1>Contents</h1>
+</div>
 ```
 
 In your gulp file add
@@ -36,4 +36,4 @@ gulp.task('toc',
 Then run `gulp toc' from the command line.
 
 ##TODO##
-See the [issues](https://github.com/portsoc/gulp-toc/issues) page.
+See the [issues](https://github.com/ear1grey/gulp-outliner/issues) page.
