@@ -29,7 +29,7 @@
       "url": "http://creativecommons.org/licenses/by-sa/4.0/"
     }
   ],
-  "main": "src/index.js",
+  "main": "build/gulp-outliner.js",
   "devDependencies": {
     "gulp": "^3.8.6",
     "gulp-uglify": "^0.3.1",
