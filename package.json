@@ -1,6 +1,6 @@
 {
   "name": "gulp-outliner",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "HTML Outliner for Gulp - generates a Table of Contents",
   "homepage": "https://github.com/ear1grey/gulp-outliner",
   "author": {
