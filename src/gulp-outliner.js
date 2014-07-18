@@ -1,8 +1,12 @@
 const PLUGIN_NAME = 'gulp-outliner';
 var through = require('through2');
 var jsdom = require("jsdom").jsdom;
-var outliner=require("outliner");
+var outlinermodule = require("outliner");
 var tocdebug = false;
+
+if (tocdebug) {
+    console.log( "Outliner is " + require.resolve("outliner") );
+}
 
 // Exporting the plugin main function
 module.exports = function () {
@@ -13,6 +17,12 @@ module.exports = function () {
 
             var doc = jsdom(str, null, { features: { QuerySelector: true } });
 
+            if (tocdebug) {
+                console.log("Outlining: ", file.path);
+                console.log("Outliner: ", outlinermodule);
+            }
+
+
             try {
                 var article = doc.querySelectorAll("article");
                 if (article.length > 0) {
@@ -21,28 +31,16 @@ module.exports = function () {
                     if (h1 && title && title.innerHTML === "") {
                         var firstHeading = h1.innerHTML;
                         if (tocdebug) {
-                            grunt.log.writeln("Title to: " + firstHeading);
+                            console.log("Title to: " + firstHeading);
                         }
                         title.innerHTML = firstHeading;
                     }
 
                     // generate table of contents
                     var toc = doc.querySelector("#contents");
-                    if (tocdebug) {
-                        console.log( "Getting handle on Outliner from " + require.resolve("outliner") );
-                    }
 
-                    outliner.genPop( doc , article[0], toc );
+                    outlinermodule.genPop( doc, article[0], toc );
 
-                    if (tocdebug) {
-                        console.log("crumbs:" + file.path);
-                    }
-
-                    // add breadcrumbs
-                    var breadcrumbs = doc.querySelector("#breadcrumbs");
-                    if (breadcrumbs) {
-                        breadcrumbs.innerHTML = outliner.crumb(file.path.split("content/")[1]);
-                    }
                 } else {
                     if (tocdebug) {
                         console.log(" No article in:" + file.path);
@@ -51,6 +49,7 @@ module.exports = function () {
             } catch (e) {
                 if (tocdebug) {
                     console.log( "Ignoring un-outline-able file:" + file.path);
+                    console.log( e );
                 }
             }
 

@@ -1,6 +1,6 @@
 {
   "name": "gulp-outliner",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "HTML Outliner for Gulp - generates a Table of Contents",
   "homepage": "https://github.com/ear1grey/gulp-outliner",
   "author": {
@@ -29,17 +29,17 @@
       "url": "http://creativecommons.org/licenses/by-sa/4.0/"
     }
   ],
-  "main": "build/index.js",
+  "main": "src/index.js",
   "devDependencies": {
     "gulp": "^3.8.6",
     "gulp-uglify": "^0.3.1",
     "jsdom": "^0.11.1",
-    "outliner": "^0.1.0",
+    "outliner": "^0.1.1",
     "through2": "^0.5.1"
   },
   "dependencies": {
     "jsdom": "^0.11.1",
-    "outliner": "^0.1.0",
-    "through2": "^0.5.1"    
+    "outliner": "^0.1.2",
+    "through2": "^0.5.1"
   }
 }
