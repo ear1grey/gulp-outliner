@@ -1,4 +1,5 @@
 var gulp = require('gulp');
+var bump = require('gulp-bump');
 var uglify = require('gulp-uglify');
 
 
@@ -17,6 +18,12 @@ gulp.task('scrunch',
             .pipe(gulp.dest(target));
     }
 );
+
+gulp.task('bump', function(){
+  gulp.src('./package.json')
+  .pipe(bump())
+  .pipe(gulp.dest('./'));
+});
 
 gulp.task('templates',
     function() {
